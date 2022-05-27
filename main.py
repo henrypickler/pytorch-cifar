@@ -108,7 +108,7 @@ def train(epoch):
         total += targets.size(0)
         correct += predicted.eq(targets).sum().item()
 
-    print(f'Loss: {(train_loss/(len(testloader))):.3f} | Acc: {100.*correct/total:.3f%} ({correct}/{total})')
+    print(f'Loss: {(train_loss/(len(testloader))):.3} | Acc: {100.*correct/total:.3%} ({correct}/{total})')
 
 
 def test(epoch):
@@ -128,7 +128,7 @@ def test(epoch):
             total += targets.size(0)
             correct += predicted.eq(targets).sum().item()
 
-        print(f'Loss: {(test_loss/(len(testloader))):.3f} | Acc: {100.*correct/total:.3f%} ({correct}/{total})')
+        print(f'Loss: {(test_loss/(len(testloader))):.3} | Acc: {100.*correct/total:.3%} ({correct}/{total})')
 
     # Save checkpoint.
     acc = 100.*correct/total
